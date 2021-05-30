@@ -10,8 +10,21 @@ function crypto(){
     function compare(password1,hash){
         return Bcrypt.compareSync(password1,hash);
     }
+    function getEncrypt (input){
+        const enc = Crypto.AES.encrypt(input,key);
+        return enc.toString();
+    }
+    function getDecrypt (input){
+        const dec = Crypto.AES.decrypt(input,key);
+        return dec.toString(Crypto.enc.Utf8);
+    }
+
     return { cryptPassword : cryptPassword,
-        compare : compare};
+        compare : compare,
+        getEncrypt : getEncrypt,
+        getDecrypt : getDecrypt
+    
+    };
 }
 
 module.exports = crypto();
