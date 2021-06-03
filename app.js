@@ -19,20 +19,20 @@ app.use(expressFunction.json());
 
 
 app.use("/api/users",function(req, res ,next){
-  console.log(req.headers.token);
+  
     
 
     var   usertoken = new token1(false,req.headers.token);
-    console.log("aaa");
+    
     if (!usertoken.isNotexpired()){
-        console.log("bbb");
+       
         res.send( usertoken.isNotexpired());
 
         
     }
-    console.log("ccc");
     
     
+    console.log("next");
     return next();
     
 })
