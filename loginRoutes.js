@@ -6,11 +6,14 @@ const token1 = require('./userToken.js');
 var loginRoutes = express.Router();
 
 loginRoutes.post("/login",function(req,res){
-    console.log("login work");
+    
     userModel.findOne(
        { id : req.body.id},{password : 1,_id : 1, role : 1},function(err,doc){
            
+           
+           
            if(err){
+               
                return res.send("eeeee");
            }
        var compare = crypto.compare(req.body.password,doc.password)

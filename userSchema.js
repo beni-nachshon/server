@@ -9,13 +9,13 @@ var userSchema = new Schema({
         type : String
     }, 
      passport : {
-        type : Number
+        type : String
     },
       phone : {
-        type :Number
+        type :String
     },
       age : {
-        type :Number
+        type :String
     },
     country : {
         type :String
@@ -24,7 +24,7 @@ var userSchema = new Schema({
         type :String
     },
     graduationYear : {
-        type :Number
+        type :String
     },
     academicInstitution : {
         type :String
@@ -39,7 +39,7 @@ var userSchema = new Schema({
         type :String
     },
     yearInResidency  : {
-        type :Number
+        type :String
     },
     password : {
         type :String
@@ -52,12 +52,3 @@ var userSchema = new Schema({
 
 module.exports = mongoose.model("user",userSchema);
 
-// age : any;
-// country : any;
-// city : any;
-// graduationYear : any;
-// academicInstitution : any
-// medicalInstitution : any;
-// residency: any;
-// department : any;
-// yearInResidency : any;

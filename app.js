@@ -32,7 +32,7 @@ app.use("/api/users",function(req, res ,next){
     }
     
     
-    console.log("next");
+   
     return next();
     
 })
